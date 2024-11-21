@@ -59,6 +59,11 @@ describe('Home', () => {
         const headingEl = await $('.elementor-widget-container h1');
         //const headingElText = await headingEl.getText();
 
+        /**
+         * getText() - for text manipulation
+         * toHaveText() - to validate the exact text from the element directly+
+         */
+
         //Assert the text
         //await expect(headingElText).toEqual('Think different. Make different.');
         await expect(headingEl).toHaveText('Think different. Make different.')
