@@ -50,7 +50,7 @@ describe('Home', () => {
         await expect(browser).not.toHaveUrl(expect.stringContaining("#get-started"));
     });
 
-    it.only('Find heading elemnt and assert the text', async () => {
+    it('Find heading elemnt and assert the text', async () => {
 
         //Open homepage
         await browser.url('https://practice.sdetunicorns.com/');
