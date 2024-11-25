@@ -1,11 +1,10 @@
-/**
- * 
- */
+import { HomePage } from "../pages/home-page";
+const homepage = new HomePage();
 
 describe('Navigation Menu', () => {
     it('Get the text of all menu items and assert them', async () => {
-        browser.url('/');
-
+        //browser.url('/');
+        await homepage.open();
         const  expectedLinks = [
             'Home',
             'About',
@@ -20,14 +19,14 @@ describe('Navigation Menu', () => {
         //await $('#zak-primary-menu').waitForDisplayed();
         //! Wait until the home text is desplayed on the navigation menu
         await browser.waitUntil( async () => {
-            const homeText = await $('#zak-primary-menu li').getText()
+            const homeText = await homepage.NavComponent.firstNavMenuList.getText()
             return homeText === "Home" // True || False
         }, {
             timeoutMsg: 'Could not verify the home text from #zak-primary-menu li'
         });
 
         //const navLinks = await $('#zak-primary-menu').$$('li[id*=menu]');
-        const navLinks = await $$('#zak-primary-menu li[id*=menu]');
+        const navLinks = await homepage.NavComponent.linksNavMenu;
 
         for (const link of navLinks){
             actualLinks.push(await link.getText())
