@@ -7,10 +7,24 @@ const homepage = new HomePage()
 
 describe('Home', () => {
 
+    // before(async () => {
+    //     console.log('THIS COULD BE USED FOR TEST SETUP');
+    // });
+    beforeEach(async() => {
+        console.log('THIS RUNS BEFORE EACH TEST');
+        await homepage.open();
+    });
+    // after(async () => {
+    //     console.log('THIS COULD BE USED FOR TEST CLEANUP');
+    // });
+    // afterEach(async() => {
+    //     console.log('THIS RUNS AFTER EACH TEST');
+    // });
+
     it('Open URL and Assert title', async () => {
         //Open URL
         // await browser.url('https://practice.sdetunicorns.com/');
-        await homepage.open();
+        
 
         //Assert title
         await expect(browser).toHaveTitle('Practice E-Commerce Site – SDET Unicorns')
@@ -19,7 +33,7 @@ describe('Home', () => {
     it('Assert URL in about page', async () => {
         //Open URL
         //await browser.url('https://practice.sdetunicorns.com/');
-        await homepage.open();
+        
         
         //Click About page
         await $('=About').click();
@@ -33,7 +47,7 @@ describe('Home', () => {
 
         //Open homepage
         //await browser.url('https://practice.sdetunicorns.com/');
-        await homepage.open();
+        
 
         //Click get started button
         await $('a#get-started').click();
@@ -46,7 +60,7 @@ describe('Home', () => {
 
         //Open homepage
         //await browser.url('https://practice.sdetunicorns.com/');
-        await homepage.open();
+        
 
         //Click get started button
         //await $('a#get-started').click();
@@ -64,7 +78,7 @@ describe('Home', () => {
 
         //Open homepage
         //await browser.url('https://practice.sdetunicorns.com/');
-        await homepage.open();
+        
 
         // Find heading element
         //const headingEl = await $('.elementor-widget-container h1');
