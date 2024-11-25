@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 describe('Navigation Menu', () => {
     it('Get the text of all menu items and assert them', async () => {
         browser.url('/');
