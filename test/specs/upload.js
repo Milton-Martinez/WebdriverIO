@@ -24,7 +24,7 @@ describe('Upload Tests', () => {
         await browser.url('https://the-internet.herokuapp.com/upload');
 
         // Store test file path
-        const filePath = path.join(__dirname, './assets/wdio.jpg');
+        const filePath = path.join(__dirname, './test/data/wdio.jpg');
 
         //upload test file in chrome
         const remoteFilePath = await browser.uploadFile(filePath);
@@ -45,7 +45,7 @@ describe('Upload Tests', () => {
         await browser.url('/cart/');
 
         // Store test file path
-        const filePath = path.join(__dirname, './assets/wdio.jpg');
+        const filePath = path.join(__dirname, './test/data/wdio.jpg');
 
         //upload test file in chrome
         const remoteFilePath = await browser.uploadFile(filePath);
