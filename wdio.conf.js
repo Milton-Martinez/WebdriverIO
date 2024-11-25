@@ -22,7 +22,7 @@ export const config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/**/blog.js'
+        './test/specs/**/nav-with-pauses.js'
     ],
     // Patterns to exclude.
     exclude: [

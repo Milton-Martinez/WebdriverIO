@@ -9,6 +9,8 @@
   "scripts": {
     "test": "npx wdio",
     "test:home": "npx wdio run ./wdio.conf.js --spec home.js",
+    "test:nav": "npx wdio run ./wdio.conf.js --spec nav.js",
+    "test:nav-pause": "npx wdio run ./wdio.conf.js --spec nav-wit-pauses.js",
     "test:blog": "npx wdio run ./wdio.conf.js --spec blog.js",
     "test:contact": "npx wdio run ./wdio.conf.js --spec contact.js"
   }
