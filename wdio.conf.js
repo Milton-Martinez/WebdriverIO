@@ -68,7 +68,7 @@ export const config = {
     capabilities: [{
         // capabilities for local browser web tests
         browserName: 'chrome', // or "firefox", "microsoftedge", "safari",
-        browserName: 'firefox'
+        // browserName: 'firefox'
     }],
 
     //
@@ -141,7 +141,11 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    // reporters: ['dot'],
+    // reporters: [['allure', {
+    //     outputDir: 'allure-results',
+    //     disableWebdriverStepsReporting: false,
+    //     disableWebdriverScreenshotsReporting: false,
+    // }]],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

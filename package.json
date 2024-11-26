@@ -2,6 +2,7 @@
   "name": "wdio-course",
   "type": "module",
   "devDependencies": {
+    "@wdio/allure-reporter": "^9.2.14",
     "@wdio/cli": "^9.3.0",
     "@wdio/local-runner": "^9.3.0",
     "@wdio/mocha-framework": "^9.2.8"
@@ -14,5 +15,8 @@
     "test:blog": "npx wdio run ./wdio.conf.js --spec blog.js",
     "test:contact": "npx wdio run ./wdio.conf.js --spec contact.js",
     "test:upload": "npx wdio run ./wdio.conf.js --spec upload.js"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.32.0"
   }
 }
