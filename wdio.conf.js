@@ -22,12 +22,27 @@ export const config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/**/nav-with-pauses.js'
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
     ],
+    //
+    // ============
+    // Suites
+    // ============
+    suites: {
+        smoke: [
+            './test/specs/**/blog.js',
+            './test/specs/**/contact.js',
+            './test/specs/**/nav-with-pauses.js'
+        ],
+        component: [
+            './test/specs/**/nav.js',
+        ]
+    },
+    //
     //
     // ============
     // Capabilities
@@ -52,7 +67,8 @@ export const config = {
     //
     capabilities: [{
         // capabilities for local browser web tests
-        browserName: 'chrome' // or "firefox", "microsoftedge", "safari"
+        browserName: 'chrome', // or "firefox", "microsoftedge", "safari",
+        browserName: 'firefox'
     }],
 
     //
